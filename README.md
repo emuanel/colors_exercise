@@ -10,8 +10,11 @@ MODEs:
         - "mix-saturate" - last color has new saturation equal to average of other colors
         
 example of CLI:
+
         python test.py 21,2,2,2 wa, 0,0,0,0
+
         python test.py -m lowest 
+        
         python test.py --mode highest 255,255,255,255 11,11,11
         
         
