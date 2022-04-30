@@ -166,14 +166,16 @@ def read_file(fileName="colors.txt"):
     :return: a list with lines (non-valid colors).
     """
     colors = []
-    with open(fileName) as fp:
-        while True:
-            line = fp.readline()
-            if not line:
-                break
-            colors.append(line.strip('\n'))        #without '/n'
+    try:
+        with open(fileName) as fp:
+            while True:
+                line = fp.readline()
+                if not line:
+                    break
+                colors.append(line.strip('\n'))        #without '/n'
+    except:
+        print("problem with file")
     return colors
-  
     
 if (__name__ == "__main__"):
     colors_nonvalid = read_file()           #colors from file (even non-valid)
